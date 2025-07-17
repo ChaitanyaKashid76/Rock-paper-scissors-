@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h1 {
+  background-color: #081b31;
+  color: white;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+}
+
+/* Choices Section */
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #081b31;
+}
+
+.choice img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Scoreboard */
+.score-bord {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: 3rem;
+  gap: 5rem;
+  flex-wrap: wrap; /* ✅ wrap if small width */
+}
+
+#user-score,
+#comp-score {
+  font-size: 4rem;
+}
+
+/* Message Box */
+.msg-container {
+  margin-top: 5rem;
+}
+
+#msg {
+  background-color: #081b31;
+  color: #fff;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+/* ✅ RESPONSIVE MEDIA QUERIES */
+
+/* Tablets & Medium Screens */
+@media (max-width: 1024px) {
+  .choice {
+    height: 140px;
+    width: 140px;
+  }
+
+  .choice img {
+    height: 130px;
+    width: 130px;
+  }
+
+  .score-bord {
+    font-size: 1.8rem;
+    gap: 3rem;
+  }
+
+  #msg {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  .choices {
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .choice {
+    height: 120px;
+    width: 120px;
+  }
+
+  .choice img {
+    height: 110px;
+    width: 110px;
+  }
+
+  .score-bord {
+    font-size: 1.6rem;
+    margin: 2rem;
+    gap: 2rem;
+  }
+
+  #user-score,
+  #comp-score {
+    font-size: 3rem;
+  }
+
+  #msg {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .choices {
+    gap: 1.5rem;
+  }
+
+  .choice {
+    height: 90px;
+    width: 90px;
+  }
+
+  .choice img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .score-bord {
+    font-size: 1.4rem;
+    gap: 1.5rem;
+  }
+
+  #user-score,
+  #comp-score {
+    font-size: 2.5rem;
+  }
+
+  #msg {
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+  }
+}
